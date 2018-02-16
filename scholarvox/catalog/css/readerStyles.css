@@ -1,0 +1,605 @@
+@charset "UTF-8";
+/* CSS Document */
+@font-face {
+    font-family: 'adventregular';
+    src: url('/css/fonts/adventregular.eot');
+    src: url('/css/fonts/adventregular.eot') format('embedded-opentype'),
+         url('/css/fonts/adventregular.woff2') format('woff2'),
+         url('/css/fonts/adventregular.woff') format('woff'),
+         url('/css/fonts/adventregular.ttf') format('truetype'),
+         url('/css/fonts/adventregular.svg#adventregular') format('svg');
+}
+@font-face {
+    font-family: 'adventbold';
+    src: url('/css/fonts/adventbold.eot');
+    src: url('/css/fonts/adventbold.eot') format('embedded-opentype'),
+         url('/css/fonts/adventbold.woff2') format('woff2'),
+         url('/css/fonts/adventbold.woff') format('woff'),
+         url('/css/fonts/adventbold.ttf') format('truetype'),
+         url('/css/fonts/adventbold.svg#adventbold') format('svg');
+}
+@font-face {
+    font-family: 'adventlight';
+    src: url('/css/fonts/adventlight.eot');
+    src: url('/css/fonts/adventlight.eot') format('embedded-opentype'),
+         url('/css/fonts/adventlight.woff2') format('woff2'),
+         url('/css/fonts/adventlight.woff') format('woff'),
+         url('/css/fonts/adventlight.ttf') format('truetype'),
+         url('/css/fonts/adventlight.svg#adventlight') format('svg');
+}
+*{	outline: none;
+	margin: 0;
+	padding:0;
+	outline: none;}
+html, body{
+	background: url(/images/lecteur/bgdBackground.png);
+	font-family: Helvetica, Arial, sans-serif;
+	color: #828282;}
+h3{
+	font-size: 16px;
+	line-height: 17px;
+	margin-bottom: 10px;}
+p{
+	font-family: adventregular, Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	line-height:15px;
+	color:#e6f1d5;}
+p strong, p b{
+	font-family: adventbold, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	color: #fff;}
+.itemLink{
+	margin: 5px 0 -10px;
+	font-size: 12px;
+	letter-spacing:1px;}
+/*888888888888888888888888888888888888888888888888888888888*/
+.mainContainer{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	text-align: center;}
+.mainContainer img{
+	width: 425px;
+	margin: 10px 0;}
+/*888888888888888888888888888888888888888888888888888888888*/
+.displayControl{
+	position: fixed;
+	top: 0px;
+	left: 90px;
+	z-index:50;}
+.displayControl .navButton{
+	background:#8d8d8c;
+	-moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+	display: inline-table;
+	position: relative;
+	top:0px;
+	margin-left: 10px;
+	box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.3);
+	padding: 3px 0 0 3px;}
+.displayControl .active{
+	background:#a1cc5c;
+	box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.3);}
+#btn-bmk img{
+	width: 26px;}
+.nav{
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index:50;}
+a.button{
+	padding: 7px 10px 5px 10px;
+	background: #797a79;
+	color: #fff;
+	text-decoration: none;
+	font-family: adventregular, Helvetica, Arial, sans-serif;
+	letter-spacing: 1px;
+	font-size: 12px;}
+a.button:hover{
+	background: #4c4c4c;}
+.btnOpen img{
+	width: 26px;}
+.champTexte{
+	font-size: 10px;
+	width: 150px;
+	color: #7369a4;
+	height: 15px;
+	padding: 5px;
+	-webkit-appearance: none;
+	-webkit-border-radius:0;
+	overflow:hidden;
+	vertical-align: baseline;
+	border: none;}
+/*888888888888888888888888888888888888888888888888888888888*/
+.navBox{
+	display: none;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	width: 290px;
+	box-shadow: 0px 5px 19px 0px rgba(0, 0, 0, 0.6);
+	background:#a1cc5c;
+	font-family: adventlight, Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	letter-spacing: 2px;
+	z-index:100;
+	color: #fff;
+	text-align: left;}
+.navBox a{
+	color: #fff;
+	text-decoration: none;}
+.logFlap a{
+	color: #fff;}
+.navBox ul{
+	list-style-type:none;}
+.navBox li{
+	line-height: 25px;
+	min-height: 30px;}
+.navFlap{
+	padding: 20px;
+	background: #622f4e url(/images/lecteur/navFlapBackground.png) repeat-x;
+	border-top: solid 1px #71385b;}
+.logFlap a{
+	color: #ebf1e1;}
+.navBox .close{
+	position: absolute;
+	top: 10px;
+	right: -5px;}
+.navBox .close img{
+	width: 50%;}
+.curentNavFlap{
+	background: #729d2e;}
+.curentNavFlap:hover{
+	background: #729d2e !important;}
+.recNavFlap{
+	background: #e66f4f;}
+.recNavFlap:hover{
+	background: #e66f4f !important;}
+/*888888888888888888888888888888888888888888888888888888888*/
+.resultsContainer .navFlap{
+	background-image: none;
+	border-top: solid 1px #c4daa2;
+	padding-top: 10px;}
+.resultsContainer{
+	border-bottom: solid 1px #c4daa2;
+	max-height: 560px;
+	overflow: scroll;}
+.resultsContainer .navFlap:hover{
+	background: #7fac37;}
+/*888888888888888888888888888888888888888888888888888888888*/
+.zoomContainer{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 80px;}
+.zoomContainer img{
+	width: 26px;
+	margin-right: 10px;}
+/*888888888888888888888888888888888888888888888888888888888*/
+#tocBox .resultsContainer{
+	border: none;
+	max-height: 560px;
+	overflow: scroll;}
+#tocBox .resultsContainer .navFlap:first-child{border: none !important;}#tocBox p.tab0{padding-left: 0px;}
+p.tab1{padding-left: 10px;}
+p.tab2{padding-left: 20px;}
+p.tab3{padding-left: 30px;}
+.tab0:first-child{font-family: adventbold, Helvetica, Arial, sans-serif;}
+.tab1:first-child{background:url(../images/lecteur/tocItemBgd.png) no-repeat 0px 2px;}
+.tab2:first-child{background:url(../images/lecteur/tocItemBgd.png) no-repeat 10px 2px;}
+.tab3:first-child{background:url(../images/lecteur/tocItemBgd.png) no-repeat 20px 2px;}
+/*p.tab1:first-child{ border-left: 1px solid #ab5e8d;}
+p.tab2:first-child{ border-left: 2px solid #ab5e8d;}*/
+/*888888888888888888888888888888888888888888888888888888888*/
+#printBox .champTexte{
+	width: 50px;
+	vertical-align: middle;}
+#printBox  li{margin: 10px 0 10px 0;}
+#printBox  li img{vertical-align: sub;}
+#printBox .contract{font-size: 14px; padding: 15px 0 10px 20px;}
+#print-panel a.fakeradio{
+	position: relative;
+	top: 5px;}
+/*888888888888888888888888888888888888888888888888888888888*/
+
+#noteBox .resultsContainer{
+	border: none;
+	max-height: 870px;
+	overflow: scroll;}
+#noteBox .champTexte{
+	width: 240px;
+	resize: none;
+	background: #f3886b;
+	border: none;
+	color: #fff;}
+#noteBox .noteTitle{
+	height: 90px;
+	font-family: adventregular, Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height:17px;
+	letter-spacing:2px;}
+#noteBox .noteNote{
+	height: 350px;
+	font-family: adventregular, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height:15px;
+	letter-spacing:2px;}
+#noteBox .notePage{
+	width: 30px;}
+#noteBox .spacer{
+	margin-top: 20px;}
+#noteBox .spacer a{
+	font-size: 14px;
+	font-family: adventregular, Helvetica, Arial, sans-serif;}
+#newNote{display: none;}
+#noteBox .itemLink a img{
+	vertical-align: middle;
+	margin-left: 5px;
+	background:#8d8d8c;
+	-moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+	display: inline-table;
+	position: relative;
+	top:-1px;
+	padding: 5px;
+	margin-left: 5px;}
+#noteBox .curentNavFlap .itemLink a img{
+	background:#7d7d7c;}
+#noteBox .navFlap:hover .itemLink a img{
+	background:#7d7d7c;}
+#noteBox .navFlap .itemLink a img:hover{
+	background:#7a7a7a;}
+#editNote_2{display:none;}
+.note_delete img, .note_expand img, .note_edit img, .note_expand_img img{
+	width: 15px;}
+#noteBox .itemButtons{
+	position: relative; 
+	left: -10px;
+	margin-top: 20px;}
+/*888888888888888888888888888888888888888888888888888888888*/
+#bookmarkBox .itemLink a img{
+	vertical-align: middle;
+	margin-left: 5px;
+	background:#8d8d8c;
+	-moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+	display: inline-table;
+	position: relative;
+	top:-1px;
+	padding: 5px;
+	margin-left: 5px;}
+#bookmarkBox .resultsContainer{
+	border:none;}
+#bookmarkBox .navFlap:first-child{
+	border:none;}
+/*888888888888888888888888888888888888888888888888888888888*/
+#helpBox{
+	left:50%;
+	top: 30%;
+	width: 40%;
+	min-width:200px;
+	margin-left: -20%;
+	font-size: 16px;}	
+#helpBox ul{
+	margin-top: 20px;}
+#helpBox li{
+	/*text-indent: -50px;
+	padding-left: 50px;*/
+	line-height: 18px;
+	letter-spacing: 0.5px;
+	margin-top: 10px;}
+#helpBox strong{
+	font-family: adventbold, Helvetica, Arial, sans-serif;
+	font-weight:normal;}
+/*888888888888888888888888888888888888888888888888888888888*/
+#print-panel input {
+    width: 30px;}
+#print-panel .spacer{
+	margin-top: 30px;}
+#print-panel .cgp{
+	font-size: 12px;}
+#print-warning{
+	font-family: adventregular, Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 12px;}
+#print-warning p, #print-warning li{
+	line-height: 14px;
+	margin-bottom: 10px;}
+/*888888888888888888888888888888888888888888888888888888888*/
+.booklet .b-wrap-right{
+	background: none !important;}
+.pf{
+	box-shadow: none !important;}
+
+/*888888888888888888888888888888888888888888888888888888888*/
+/*888888   SMALLSIZE  8888888888888888888888888888888888888*/
+/*888888888888888888888888888888888888888888888888888888888*/
+
+.smallSize #btn-bmk img, .smallSize .btnOpen img{
+	width: auto;}
+
+.smallSize a.button{
+	font-size: 25px;
+	padding: 10px 10px 5px 10px;}
+.smallSize .navBox{
+	font-size: 25px !important;
+	line-height: 55px !important;
+	top: 0px !important;
+	left: 0 !important;
+	width: 100%;
+	min-width: 320px;
+	background-color: transparent;}
+.smallSize h3{
+	font-size: 35px;
+	line-height: 55px;}
+.smallSize p{
+	font-family: adventregular, Helvetica, Arial, sans-serif;
+	color: #fff;
+	font-size: 25px;
+	line-height: 45px !important;}
+.smallSize .navBox li{
+	font-size: 25px;
+	line-height: 55px !important;}
+.smallSize .champTexte {
+    width: 55vw;
+    height: 30px;
+    padding: 5px;
+    font-size: 23px;
+    position: relative;
+    top: 1px;}
+.smallSize #print-panel input {
+    width: 60px;
+    text-align: center;}
+.smallSize #print-panel .cgp{
+	font-size: 25px;}
+.smallSize #print-warning{
+	font-family: adventregular, Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 25px;}
+.smallSize #print-warning p, #print-warning li{
+	line-height: 35px;
+	margin-bottom: 10px;}
+.smallSize .navBox .close{
+	position:absolute;
+	top:10px;
+	right: 10px;
+	z-index: 2000;
+	width: 27px;
+	text-align: center;}
+.smallSize .navBox .close img{
+	width: 120%;}
+.smallSize .loginBox .champTexte{
+	font-size: 22px;
+	width: 75% !important;
+	padding: 16px 5px 8px 5px;
+	margin-bottom: 25px;
+	font-size: 25px;}
+.smallSize .loginBox .button{
+	font-size: 25px;
+	margin: 20px auto  20px auto;
+	display: table;
+	height: 50px !important;
+	width: 100% !important;
+	padding: 12px 10px 15px 10px;}
+.smallSize .resultsContainer {
+    max-height: unset !important;
+    height: 100vh;}
+.smallSize p.tab1{padding-left: 20px;}
+.smallSize p.tab2{padding-left: 40px;}
+.smallSize p.tab3{padding-left: 60px;}
+.smallSize .tab0:first-child{font-family: adventbold, Helvetica, Arial, sans-serif;}
+.smallSize .tab1:first-child{background:url(../images/lecteur/tocItemBgd.png) no-repeat 0px 22px;}
+.smallSize .tab2:first-child{background:url(../images/lecteur/tocItemBgd.png) no-repeat 20px 22px;}
+.smallSize .tab3:first-child{background:url(../images/lecteur/tocItemBgd.png) no-repeat 40px 22px;}
+.smallSize #print-warning{
+	font-size: 25px;
+	/*background: #a9367d;*/}
+.smallSize #print-panel{
+	max-height: 100vh;
+	overflow: scroll;}
+.smallSize #pagemark-panel {
+    max-height: 100vh;
+    overflow: scroll;}
+.smallSize #noteBox .noteTitle{
+	font-family: adventlight, Helvetica, Arial, sans-serif;
+	height: 90px;
+	font-size: 25px;
+	line-height: 35px;
+	letter-spacing:2px;
+	width: calc(92vw - 20px);
+	padding: 10px;}
+.smallSize #noteBox .noteNote{
+	height: 350px;
+	font-family: adventlight, Helvetica, Arial, sans-serif;
+	font-size: 25px;
+	line-height: 35px;
+	letter-spacing:2px;
+	width: calc(92vw - 20px);
+	padding: 10px;}
+.smallSize #noteBox .notePage{
+	width: 80px;}
+.smallSize input[type=checkbox] {
+	transform: scale(2);
+	position: relative;
+	top: -5px;
+	left: 5px;}
+.smallSize #noteBox .spacer a{
+	font-size: 25px;
+	font-family: adventregular, Helvetica, Arial, sans-serif;}
+.smallSize .note_delete img, .smallSize .note_expand img, .smallSize .note_edit img, .smallSize .note_expand_img img{
+	width: 50px;}
+.smallSize #noteBox{
+	max-height: 100vh;
+	overflow: scroll;}
+.smallSize #noteBox .itemButtons{
+	left: -10px;
+	margin-top: 30px;}
+
+
+/*888888888888888888888888888888888888888888888888888888888*/
+/*888888   MEDIUMSIZE  888888888888888888888888888888888888*/
+/*888888888888888888888888888888888888888888888888888888888*/
+
+.mediumSize .navFlap{
+	padding: 80px;}
+.mediumSize .btnOpen img{
+	width: 150px;}
+.mediumSize #btn-bmk img{
+	width: 80px;}
+.mediumSize a.button{
+	font-size: 85px;
+	padding: 20px 30px 5px 30px;}
+.mediumSize #nav-panel{
+	max-height: 100vh;
+	overflow: scroll;}
+.mediumSize .navBox{
+	font-size: 85px !important;
+	line-height: 95px !important;
+	top: 0px !important;
+	left: 0 !important;
+	width: 100%;
+	min-width: 320px;
+	background-color: transparent;}
+.mediumSize h3{
+	font-size: 85px;
+	line-height: 95px;
+	font-family: adventbold, Helvetica, Arial, sans-serif;}
+.mediumSize p{
+	font-family: adventregular, Helvetica, Arial, sans-serif;
+	color: #fff;
+	font-size: 85px;
+	line-height: 90px !important;}
+.mediumSize .navBox li{
+	font-size: 85px;
+	line-height: 85px !important;
+	margin-bottom: 90px;}
+.mediumSize .navBox li:last-child{
+	margin-bottom: 0px;}
+.mediumSize .champTexte {
+	font-family: adventregular, Helvetica, Arial, sans-serif;
+    width: 55vw;
+    height: 90px;
+    padding: 15px 10px 5px 10px;
+    font-size: 75px;
+    position: relative;
+    top: 1px;}
+.mediumSize #search-panel input{
+    margin-bottom: 40px;}
+.mediumSize .img-radio{
+	width: 70px;}
+.mediumSize #print-panel input {
+    width: 140px;
+    text-align: center;}
+.mediumSize #print-warning ul{
+	list-style: inherit !important;}
+.mediumSize #print-panel .cgp{
+	font-size: 85px;}
+.mediumSize #print-warning{
+	font-family: adventregular, Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 85px;}
+.mediumSize #print-warning p, #print-warning li{
+	line-height: 80px;
+	margin-bottom: 30px;
+	font-size: 70px;}
+.mediumSize .navBox .close{
+	position:absolute;
+	top:50px;
+	right: 60px;
+	z-index: 2000;
+	width: 27px;
+	text-align: center;}
+.mediumSize .navBox .close img{
+	width: 200%;}
+.mediumSize .loginBox .champTexte{
+	font-size: 85px;
+	width: 75% !important;
+	padding: 16px 5px 8px 5px;
+	margin-bottom: 25px;
+	font-size: 85px;}
+.mediumSize .loginBox .button{
+	font-size: 85px;
+	margin: 20px auto  20px auto;
+	display: table;
+	height: 50px !important;
+	width: 100% !important;
+	padding: 12px 10px 15px 10px;}
+.mediumSize .resultsContainer {
+    max-height: unset !important;
+    height: 100vh;}
+.mediumSize p.tab1{padding-left: 20px;}
+.mediumSize p.tab2{padding-left: 40px;}
+.mediumSize p.tab3{padding-left: 60px;}
+.mediumSize .tab0:first-child{font-family: adventbold, Helvetica, Arial, sans-serif;}
+.mediumSize .tab1:first-child{background:url(../images/lecteur/tocItemBgd.png) no-repeat 0px 22px;}
+.mediumSize .tab2:first-child{background:url(../images/lecteur/tocItemBgd.png) no-repeat 20px 22px;}
+.mediumSize .tab3:first-child{background:url(../images/lecteur/tocItemBgd.png) no-repeat 40px 22px;}
+.mediumSize #print-warning{
+	font-size: 85px;
+	height: auto;
+	padding: 80px 80px 200px 80px !important;
+	/*background: #a9367d;*/}
+.mediumSize #print-panel{
+	max-height: 100vh;
+	overflow: scroll;}
+.mediumSize #pagemark-panel {
+    max-height: 100vh;
+    overflow: scroll;}
+.mediumSize #notes-items{
+	padding-bottom: 150px;
+	background: #622f4e;}
+.mediumSize #noteBox .noteTitle{
+	font-family: adventlight, Helvetica, Arial, sans-serif;
+	height: 90px;
+	font-size: 85px;
+	line-height: 95px;
+	letter-spacing:2px;
+	width: calc(80vw - 20px);
+	padding: 10px;
+    color: rgba(255, 255, 255, 1);}
+.mediumSize #noteBox .noteNote{
+	height: 350px;
+	font-family: adventlight, Helvetica, Arial, sans-serif;
+	font-size: 85px;
+	line-height: 95px;
+	letter-spacing:2px;
+	width: calc(80vw - 20px);
+	padding: 10px;
+    color: rgba(255, 255, 255, 1);}
+.mediumSize #noteBox .notePage{
+	width: 140px;
+	text-align: center;}
+::-webkit-input-placeholder {
+   color: #fff;}
+:-moz-placeholder { /* Firefox 18- */
+   color: #fff;}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff;}
+:-ms-input-placeholder {  
+   color: #fff;}
+.mediumSize input[type=checkbox] {
+	transform: scale(5);
+	position: relative;
+    top: -20px;
+    left: 25px;}
+.mediumSize #newNote li.spacer{
+	line-height: 115px !important;	}
+.mediumSize #noteBox .spacer a{
+	font-size: 85px;
+	font-family: adventregular, Helvetica, Arial, sans-serif;}
+.mediumSize .note_delete img, .mediumSize .note_expand img, .mediumSize .note_edit img, .mediumSize .note_expand_img img{
+	width: 50px;}
+.mediumSize #noteBox{
+	max-height: 100vh;
+	overflow: scroll;}
+.mediumSize #noteBox .itemButtons{
+	left: -10px;
+	margin-top: 30px;}
+
+
+
+

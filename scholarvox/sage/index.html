@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110962365-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110962365-1');
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WLGHS6P');</script>
+<!-- End Google Tag Manager -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>Boussole - Lilliad</title>
+<link rel="stylesheet" href="css/css.css">
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/demo.js"></script>
+<script type="text/javascript" src="js/dothemagicdance.js"></script>
+<script src="js/d3.min.js"></script>
+<script src="js/graphindex.js" defer></script>
+
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLGHS6P"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="deviceAlert"><h3>L'affichage de votre écran ne permet pas une visualisation correcte de ce site. Visitez nous avec un autre support.</h3>
+</div>
+<div class="darkDiv institution">
+        <a href="#" class="darkDivClose"><img src="images/pictoClose.png" alt="Close"></a>
+        <a class="button darkDivButton" href="#" id="darkDivButton">Envoyer</a> 
+    <div class="darkDivMain institutionsDiv">
+    </div>
+</div>
+<div class="darkDiv publisher">
+        <a href="#" class="darkDivClose"><img src="images/pictoClose.png" alt="Close"></a>
+        <a class="button darkDivButton" href="#" id="darkDivButton">Envoyer</a> 
+    <div class="darkDivMain publishersDiv">
+    </div>
+</div>
+<div class="darkDiv decitre">
+        <a href="#" class="darkDivClose"><img src="images/pictoClose.png" alt="Close"></a>
+        <a class="button darkDivButton" href="#" id="darkDivButton">Envoyer</a> 
+    <div class="darkDivMain decitreDiv">
+    </div>
+</div>
+<div class="darkDiv cyberclass">
+        <a href="#" class="darkDivClose"><img src="images/pictoClose.png" alt="Close"></a>
+        <a class="button darkDivButton" href="#" id="darkDivButton">Envoyer</a> 
+    <div class="darkDivMain cyberclassDiv">
+    </div>
+</div>
+<div class="header">
+    <a href="/homepage/"><img id = 'return' src = './images/icon_return.png'></a>
+    <div class="socialLinks">
+	<!--     <a href="https://www.facebook.com/pages/Scholarvox/726851407337964" target="_blank"><img src="images/pictoFacebook.png" alt="Facebook"></a>
+		 <a href="https://twitter.com/ScholarvoxEdito" target="_blank"><img src="images/pictoTweeter.png" alt="Tweeter"></a>
+		 <a href="https://www.youtube.com/watch?v=u3ynKwhLrtA&amp;list=PLHC_dbFLZp1o-LrfZoCufdScHlCpXhSyU" target="_blank"><img src="images/pictoYoutube.png" alt="Youtube"></a>
+	-->
+    </div>
+    <div class="mainLogo">
+	    <a href="#"><img id="headerlogo" src="images/mainLogo.jpg" alt="ScholarVOX"></a>
+    </div>
+    <div class="switch">
+        <a href="#" id="switchButton" class="switchButton dayNote"> </a>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="dataviewer">
+    <div class="cockpit">
+        
+    <div class="expandButton">
+        <a href="#"><img src="images/expandButton.png"></a>
+    </div>
+        <div class="container">
+            <!--<p>Mininum Books Shared : <span class="booksNumbers">-</span> </p>-->
+            <p> <span id = 'paramlinklabellib'> Mininum Books Shared :</span>
+                <!--<input id="paramlinklabel" type="number">-->
+                <span id="paramlinklabel"></span>
+                <input id="paramlinkvalue" min="200" max="724" value="500" type="range">
+            </p>
+            <p> <span id="allInstitutionslib"> - :</span> <strong id="allInstitutions">-</strong> <a href="#" class="showInstitutionsDiv">modify</a></p>
+            <p> <span id="allPublisherslib"> - :</span> <strong id="allPublishers">-</strong> <a href="#" class="showPublishersDiv">modify</a></p>
+            <p> <span id="allThemeslib"> - :</span> <strong id="allThemes">-</strong> <a href="#" class="showDecitreDiv">modify</a></p>
+            <p> <span id="allCyberclasslib"> - :</span> <strong id="allCyberclass">-</strong> <a href="#" class="showCyberclassDiv">modify</a></p>
+        </div>
+    </div>
+
+    <div class="graphVisualisation"></div>
+
+    <div class="bottomViewer hidden">
+        <div class="mario">
+            <p id='institutionsname'>-</p>
+            <p id='numberofbooks'> - : <strong>-</strong></p>
+            <a href="#" class="close">Close</a>
+        </div>
+        <div class="luigi">
+            <div class="itemsContainerFR">
+                <div class="itemlang"><p class="lang">Fr</p></div>
+                <g id="itemimg">
+                </g>
+                <div class="itemmore"><p class="moreCovers"><a href="#">...</a></p></div>
+            </div>
+            <div class="itemsContainerEN">
+                <div class="itemlang"><p class="lang">En</p></div>
+                <g id="itemimg">
+                </g>
+                <div class="itemmore"><p class="moreCovers"><a href="#">...</a></p></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11459843; 
+var sc_invisible=1; 
+var sc_security="9c8e8221"; 
+var sc_https=1; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="Web Analytics
+Made Easy - StatCounter" href="http://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11459843/0/9c8e8221/1/" alt="Web
+Analytics Made Easy - StatCounter"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
